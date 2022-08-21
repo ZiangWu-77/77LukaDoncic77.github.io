@@ -1,2 +1,3 @@
+http://example.com/2022/08/22/preview/
 http://example.com/2022/08/20/hello-world/
 http://example.com/
