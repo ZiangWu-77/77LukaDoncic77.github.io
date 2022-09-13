@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-21T17:15:49.631Z</updated>
+  <updated>2022-09-13T16:34:55.124Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testphoto</title>
+    <link href="http://example.com/2022/09/14/testphoto/"/>
+    <id>http://example.com/2022/09/14/testphoto/</id>
+    <published>2022-09-13T16:33:48.000Z</published>
+    <updated>2022-09-13T16:34:55.124Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2022/09/14/testphoto/lane.jpg" alt="lane"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/09/14/testphoto/lane.jpg&quot; alt=&quot;lane&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql第一次作业</title>
+    <link href="http://example.com/2022/09/14/mysql01/"/>
+    <id>http://example.com/2022/09/14/mysql01/</id>
+    <published>2022-09-13T16:21:04.128Z</published>
+    <updated>2022-09-13T16:59:52.746Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>第一次有些仓促，先记录一下作业</em></p><h2 id="作业完成时间——2022-x2F-09-x2F-14"><a href="#作业完成时间——2022-x2F-09-x2F-14" class="headerlink" title="作业完成时间——2022&#x2F;09&#x2F;14"></a>作业完成时间——2022&#x2F;09&#x2F;14</h2><h3 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h3><blockquote><p>1.1 编写一条 CREATE TABLE 语句，用来创建一个包含表 1-A 中所列各项的表 Addressbook （地址簿），并为 regist_no （注册编号）列设置主键约束</p></blockquote><p><img src="/2022/09/14/mysql01/xiti1.1.png" alt="xiti1.1"></p><p>我的解答：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Addressbook</span><br><span class="line">(regist_no INTEGER NOT NULL,</span><br><span class="line">name VARCHAR(128) NOT NULL,</span><br><span class="line">address VARCHAR(256) NOT NULL,</span><br><span class="line">tel_no CHAR(10),</span><br><span class="line">mail_address CHAR(20),</span><br><span class="line">PRIMARY KEY (regist_no));</span><br><span class="line"></span><br><span class="line">INSERT INTO addressbook VALUES (<span class="string">&#x27;001&#x27;</span>,<span class="string">&#x27;李华&#x27;</span>,<span class="string">&#x27;北京市&#x27;</span>,<span class="string">&#x27;1332222000&#x27;</span>,<span class="string">&#x27;1234567890@qq.com&#x27;</span>),</span><br><span class="line">(<span class="string">&#x27;002&#x27;</span>, <span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;福建省&#x27;</span>,<span class="string">&#x27;1352222000&#x27;</span>,<span class="string">&#x27;987654321@163.com&#x27;</span>),</span><br><span class="line">(<span class="string">&#x27;003&#x27;</span>,<span class="string">&#x27;李四&#x27;</span>,<span class="string">&#x27;四川省&#x27;</span>,<span class="string">&#x27;1380000222&#x27;</span>,<span class="string">&#x27;50505055050@126.com&#x27;</span>);</span><br></pre></td></tr></table></figure><p>结果展示：<br><img src="/2022/09/14/mysql01/zuoye1.1.jpg" alt="zuoye1"></p><hr><blockquote><p>1.2假设在创建练习1.1中的 Addressbook 表时忘记添加如下一列 postal_code （邮政编码）了，请编写 SQL 把此列添加到 Addressbook 表中。</p><ul><li><em>列名 ： postal_code</em></li><li><em>数据类型 ：定长字符串类型（长度为 8）</em></li><li><em>约束 ：不能为 NULL</em></li></ul></blockquote><p>我的解答：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE addressbook ADD COLUMN postal_code CHAR(8) NOT NULL;</span><br></pre></td></tr></table></figure><p>结果展示：<br><img src="/2022/09/14/mysql01/zuoye1.2.png" alt="zuoye2"></p><hr><blockquote><p>1.3请补充如下 SQL 语句来删除 Addressbook 表。<br>(    ) table Addressbook;</p></blockquote><p>我的解答：DROP或TRUNCATE或DELETE，其中TRUNCATE清除数据速度最快效率最高。</p><blockquote><p>1.4 是否可以编写 SQL 语句来恢复删除掉的<br>Addressbook 表？</p></blockquote><p>我的解答：可以，但好像很麻烦</p><hr><p>More info: <a href="https://github.com/77LukaDoncic77">77’s git</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;em&gt;第一次有些仓促，先记录一下作业&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;作业完成时间——2022-x2F-09-x2F-14&quot;&gt;&lt;a href=&quot;#作业完成时间——2022-x2F-09-x2F-14&quot; class=&quot;headerlink&quot; title=&quot;作业完成时间——</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>re+preview</title>

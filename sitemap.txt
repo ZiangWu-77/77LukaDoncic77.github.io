@@ -1,3 +1,5 @@
+http://example.com/2022/09/14/mysql01/
+http://example.com/2022/09/14/testphoto/
 http://example.com/2022/08/22/preview/
 http://example.com/2022/08/20/hello-world/
 http://example.com/
