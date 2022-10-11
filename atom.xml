@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-13T16:34:55.124Z</updated>
+  <updated>2022-10-11T15:35:31.878Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20221011ML</title>
+    <link href="http://example.com/2022/10/11/20221011ML/"/>
+    <id>http://example.com/2022/10/11/20221011ML/</id>
+    <published>2022-10-11T12:51:03.000Z</published>
+    <updated>2022-10-11T15:35:31.878Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>很神奇的是打卡和课堂的ML课程在10.10号刚好同时开始嘿嘿</p></blockquote><h2 id="Task01：概览西瓜书-南瓜书第1、2章"><a href="#Task01：概览西瓜书-南瓜书第1、2章" class="headerlink" title="Task01：概览西瓜书 + 南瓜书第1、2章"></a>Task01：概览西瓜书 + 南瓜书第1、2章</h2><h3 id="Chap01-ML的一些基本术语"><a href="#Chap01-ML的一些基本术语" class="headerlink" title="Chap01 ML的一些基本术语"></a>Chap01 ML的一些基本术语</h3><p>数据集、标记、训练样本、测试样本、正类和负类、分布、模型泛化能力…这些概念虽然很抽象但是带入具体例子就一目了然因此不深究</p><h3 id="什么是归纳偏好？"><a href="#什么是归纳偏好？" class="headerlink" title="什么是归纳偏好？"></a>什么是归纳偏好？</h3><p>对于一组训练样本，在多数情况下有多种模型可供选择，且不同的模型往往对应不同的输出效果，而一个具体的机器学习算法要求：“必须要产生一个模型”以使得对于一个给定的输入，有一个稳定的输出，因此我们必须要选择一个模型，这时候所选择的算法在实际输出时就会表现出某种偏好，称之为归纳偏好。</p><h4 id="Ocaam’s-razor？"><a href="#Ocaam’s-razor？" class="headerlink" title="Ocaam’s razor？"></a>Ocaam’s razor？</h4><p>由于可以不同模型有不同的偏好，那实际生活中我们需要有一种偏好选择的基准，<em>奥卡姆剃刀</em>为一种常用的、自然科学研究中的基本准则。</p><h4 id="NFL定理"><a href="#NFL定理" class="headerlink" title="NFL定理"></a>NFL定理</h4><p>通过理论可以证明（参见pumpkin book P1），对于二分类的总误差与算法选择并无关联，他们的总体期望性能是相同的，这意味着，对于拥有任何可能分布的庞大数据集来说，用模型估计和随机猜测的误差会几乎相同，但这是否意味着我们设计模型没有意义呢？并非如此~事实上，我们设计模型的初衷总是针对一个特定的任务，而这个任务的数据分布往往是一定的，因此训练的模型往往能够鲁棒地在上面发挥作用。套用机器学习老师的说法：“一切抛开具体问题、具体数据分布的模型性能讨论都是在耍流氓[doge]”</p><hr><h3 id="Chap02-模型评估与选择"><a href="#Chap02-模型评估与选择" class="headerlink" title="Chap02 模型评估与选择"></a>Chap02 模型评估与选择</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>经验误差、泛化误差、过拟合</p><blockquote><p>经验误差：学习器在训练集上的误差<br>泛化误差：新样本上的误差称为“泛化误差”<br>过拟合：学习能力过于强大，以至于把训练样本所包含的不太一般的特性都学到了</p></blockquote><h4 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h4><blockquote><p>可以通过实验测试来对学习器泛化误差进行评估,从而做出选择</p></blockquote><p>way1:hold-out<br>该方法普遍使用于数据集比较大的情况:<br>留出法暴力&amp;&amp;好理解:将数据集划分为两个互斥的集合<br>注意:①留出法本质是一种分层抽样,要严格保证训练样本&#x2F;测试样本的数据分布与原数据集相同②要注意数据集划分比例2:8&#x2F;3:7势必会使训练出模型的性能不同的,选择比例的时候要斟酌</p><p>way2:交叉验证法<br>将数据集划分为k个大小相似的互斥子集,每个子集也都同时尽可能保持分布一致性(似乎在k值和样本数相接近时,这一点较难保证),进而进行k次的训练和测试.</p><p>way3:自助法<br>采用有放回抽样的方法,保证训练集的规模和原数据集D一致,但其中样本并不完备,事实上,D中有36.8%左右样本在采样后数据集中不会出现(一个常用极限)</p><h4 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h4><blockquote><ul><li>错误率: $E(f;D) &#x3D; \frac{1}{m}\sum_{i&#x3D;1}^mII(f(x_i)!&#x3D;y_i)$</li><li>精度: $acc(f;D) &#x3D; 1 - E(f;D)$</li><li>查准率:$P &#x3D; \frac{TP}{TP + FP}$, 查全率$R &#x3D; \frac{FN}{FN + TN}$</li></ul></blockquote><blockquote><ul><li>“P-R曲线”</li></ul></blockquote><p><img src="/2022/10/11/20221011ML/precision&&recall.jpg" alt="P-R曲线"></p><p>作图方法：根据学习器的预测结果对样例进行排序，排在在前面的是预测的可能性最大的正例样本，按照这个顺序逐个将样本作为正例进行预测，每次计算出当前的查全率、查准率，并绘制P-R曲线<br>作用：直观显示出学习器在样本总体上的查准率、查全率———最优的P-R曲线曲线下面积为1<br>学习器效果对比：<br>①利用BEP(Break-Even Point)就是在P-R图上做一条P &#x3D; R的直线并求与各P-R曲线交点，一般认为BEP大的学习器性能好<br>②F-score法：对P、R取调和平均，通过改变权重从而表达对学习器的查全率或查准率的重视程度(F1 度量是权重相同的F-score方法)</p><blockquote><ul><li>“macro-P、macro-R;micro-P、micro-R”的区别：macro先在各个混淆矩阵上计算查全查准率后计算平均，micro先计算整体的正负样例比后计算整体的查全查准率</li></ul></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;很神奇的是打卡和课堂的ML课程在10.10号刚好同时开始嘿嘿&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Task01：概览西瓜书-南瓜书第1、2章&quot;&gt;&lt;a href=&quot;#Task01：概览西瓜书-南瓜书第1、2章&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>testphoto</title>
