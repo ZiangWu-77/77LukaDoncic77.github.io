@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-11T15:35:31.878Z</updated>
+  <updated>2023-02-14T14:42:47.473Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20230214GNN</title>
+    <link href="http://example.com/2023/02/14/20230214GNN/"/>
+    <id>http://example.com/2023/02/14/20230214GNN/</id>
+    <published>2023-02-14T07:43:05.000Z</published>
+    <updated>2023-02-14T14:42:47.473Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Task01：图机器学习导论"><a href="#Task01：图机器学习导论" class="headerlink" title="Task01：图机器学习导论"></a>Task01：图机器学习导论</h2><h3 id="1图嵌入"><a href="#1图嵌入" class="headerlink" title="1图嵌入"></a>1图嵌入</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>·图嵌入是一种将数据(通常为高位稠密的矩阵)映射为低维稠密向量的过程。</p><h3 id="2课程概述"><a href="#2课程概述" class="headerlink" title="2课程概述"></a>2课程概述</h3><blockquote><p>传统方法：Graghlets, Gragh Kernels<br>节点嵌入方法：DeepWalk, Node2Vec<br>图神经网络:GCN, GraghSAGE, GAT, Theory of GNNs<br>知识图谱：TransE, BetaE<br>图深度生成模型: GraghRNN </p></blockquote><h3 id="3图机器学习、图神经网络编程工具推荐"><a href="#3图机器学习、图神经网络编程工具推荐" class="headerlink" title="3图机器学习、图神经网络编程工具推荐"></a>3图机器学习、图神经网络编程工具推荐</h3><h4 id="网络搭建"><a href="#网络搭建" class="headerlink" title="网络搭建"></a>网络搭建</h4><blockquote><p>PyG<br>NetworkX<br>DGL</p></blockquote><h4 id="网络可视化"><a href="#网络可视化" class="headerlink" title="网络可视化"></a>网络可视化</h4><blockquote><p>AntV<br>Echarts</p></blockquote><h4 id="图数据库"><a href="#图数据库" class="headerlink" title="图数据库"></a>图数据库</h4><blockquote><p>Neo4j</p></blockquote><h3 id="4图机器学习应用"><a href="#4图机器学习应用" class="headerlink" title="4图机器学习应用"></a>4图机器学习应用</h3><blockquote><p>Pathfinding<br>Cetrality&#x2F;importance<br>Community Detection<br>Link Prediction<br>Similarity<br>Embeddings   </p></blockquote><h3 id="5不同层次的任务"><a href="#5不同层次的任务" class="headerlink" title="5不同层次的任务"></a>5不同层次的任务</h3><blockquote><p>Node level<br>Edge level<br>Community level<br>Gragh level  </p></blockquote><h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><blockquote><p>Node level已知节点类别去推断未知节点类别<br>Edge level[Recommender Systems] 已知连接去推断位置连接  </p></blockquote><h3 id="升华"><a href="#升华" class="headerlink" title="升华"></a>升华</h3><p>“图是最优质的长期资产”、”网络效应是一个企业最深的护城河”</p><h3 id="几个图数据挖掘的项目"><a href="#几个图数据挖掘的项目" class="headerlink" title="几个图数据挖掘的项目"></a>几个图数据挖掘的项目</h3><blockquote><p>readpaper.com 本质上是大的文献图<br>connected papers 也是文献图<br>BIOS 医疗知识图谱 3000w+篇医学文献<br>liuhuanyong.github.io 刘焕勇 知识图谱大佬<br>Hypercrx浏览器插件<br>OpenRank 定量计算开源项目活跃度<br>open-galaxy.com</p></blockquote><p><strong>保持开放和学习 创造更多的连接和惊喜</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Task01：图机器学习导论&quot;&gt;&lt;a href=&quot;#Task01：图机器学习导论&quot; class=&quot;headerlink&quot; title=&quot;Task01：图机器学习导论&quot;&gt;&lt;/a&gt;Task01：图机器学习导论&lt;/h2&gt;&lt;h3 id=&quot;1图嵌入&quot;&gt;&lt;a href=&quot;#1</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>20221011ML</title>
